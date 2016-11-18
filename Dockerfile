@@ -14,3 +14,5 @@ RUN apk add --no-cache bash curl openssl python \
  && /bin/bash -l -c "source /root/.bashrc && echo Y | gcloud components install docker-credential-gcr && exit" \
  && rm -rf /opt/google-cloud-sdk/.install/.backup
 
+ENV PATH /opt/google-cloud-sdk/bin:$PATH
+
